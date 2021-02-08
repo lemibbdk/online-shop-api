@@ -20,3 +20,6 @@ app.use(statsRouter)
 app.listen(port, () => {
     console.log('Server is up on port ' + port);
 })
+
+// app.listen(port, '192.168.0.27');
+

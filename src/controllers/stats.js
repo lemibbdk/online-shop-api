@@ -6,7 +6,7 @@ const bestBuy = async (req, res) => {
     try {
         const carts = await Cart.find()
         const items = carts
-            .filter(el => el.status !== 'progress')
+            .filter(el => el.status !== 'progress' && el.status !== 'canceled')
             .reduce((acc, cart) => acc.concat(cart.items), [])
             .reduce((acc, item) => {
                 if (!acc[item.item]) {
