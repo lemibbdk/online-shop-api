@@ -1,4 +1,5 @@
 const User = require('../models/user')
+const Cart = require('../models/cart')
 const sharp = require('sharp')
 
 const add = async (req, res) => {
