@@ -24,6 +24,7 @@ const login = async (req, res) => {
 
         await user.populate({
             path: 'wishList currentCart',
+            select: '-picture',
             populate: {
                 path: 'items.item',
                 model: 'Item',
